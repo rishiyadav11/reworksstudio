@@ -110,7 +110,7 @@ const SVG = ({
           initial="initial"
           animate="animate"
           transition={{
-            duration: svgOptions?.duration || 10,
+            duration: svgOptions?.duration ?? 10,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
@@ -132,7 +132,7 @@ const SVG = ({
           initial="initial"
           animate="animate"
           transition={{
-            duration: svgOptions?.duration || 10,
+            duration: svgOptions?.duration ?? 10,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",

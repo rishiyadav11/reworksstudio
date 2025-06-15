@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -36,7 +37,7 @@ export default function TestimonialsPage() {
         <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white text-2xl md:text-4xl lg:text-6xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
           What Our <span className="text-[#00FFFF]">Clients Say</span>
         </h2>
-        <p className="text-gray-400 mb-12">Real words from real partners we've worked with.</p>
+        <p className="text-gray-400 mb-12">Real words from real partners we have worked with.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
@@ -49,9 +50,10 @@ export default function TestimonialsPage() {
               className="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-lg"
             >
               <div className="flex items-center gap-4 mb-4">
-                <img
+                <Image
                   src={t.avatar}
                   alt={t.name}
+                  fill
                   className="w-14 h-14 rounded-full border border-cyan-400"
                 />
                 <div className="text-left">
