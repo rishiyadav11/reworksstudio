@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Reworks Studio",
     images: [
       {
-        url: "/og-image.png", // add your OG image in public folder
+        url: "https://reworksstudio.vercel.app/logo.png", // add your OG image in public folder
         width: 1200,
         height: 630,
         alt: "Reworks Studio - Creative Agency",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Reworks Studio | Design, Develop, Dominate",
     description:
       "Helping startups and brands with design, development, and digital excellence.",
-    images: ["/logo.png"], // same OG image
+    images: ["https://reworksstudio.vercel.app/logo.png"], // same OG image
   },
 };
 
