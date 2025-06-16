@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { api } from '../../trpc/react';
-import { toast } from 'sonner';
+import { toast,ToastContainer } from 'react-toastify';
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
@@ -22,6 +22,7 @@ export default function ContactPage() {
 
   return (
     <section className="min-h-screen py-20 px-4 bg-gradient-to-br from-black via-[#0e0e0e] to-black text-white">
+      <ToastContainer />
         <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white text-2xl md:text-4xl lg:text-6xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
           <span className='text-white'>📬</span> Reach Out. We’ll Respond Fast
 
