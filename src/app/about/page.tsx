@@ -16,7 +16,7 @@ const teamMembers = [
     description: 'Harsh ensures we rank on top with smart keywords and strategies.',
   },
   {
-    name: 'sahil sagwan',
+    name: 'sahil sangwan',
     role: 'Video Editor',
     image: '/members/editor.jpg',
     description: 'Sahil adds life to visuals with smooth edits and engaging effects.',
