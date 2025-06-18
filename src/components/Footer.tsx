@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Right: Social Links */}
         <div className="flex gap-6">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61577148884596&rdid=hiJzoVniV5pZoGGF#"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#1877f2] transition"
@@ -24,7 +24,7 @@ const Footer = () => {
             <Facebook />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/reworkstudio_1"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#1da1f2] transition"
@@ -32,7 +32,7 @@ const Footer = () => {
             <Twitter />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/reworkstudio_1"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#e4405f] transition"
@@ -40,7 +40,7 @@ const Footer = () => {
             <Instagram />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/rework-studio-279192370/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#0077b5] transition"
