@@ -10,7 +10,7 @@ const Footer = () => {
           <p className="text-sm md:text-base text-gray-400">
             © {new Date().getFullYear()} Reworks studio. All rights reserved.
           </p>
-          <p className="text-sm text-gray-500 mt-1">Created with ❤️ by <a target='_blank' className=' text-red-100 hover:underline' href="http://rishiyadav.me/">Reworks Studio</a></p>
+          <p className="text-sm text-gray-500 mt-1">Created with ❤️ by <a target='_blank' className=' text-red-100 hover:underline' href="http://reworksstudio.vercel.app">Reworks Studio</a></p>
         </div>
 
         {/* Right: Social Links */}
