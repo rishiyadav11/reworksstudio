@@ -18,23 +18,30 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close on outside click
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
+useEffect(() => {
+  let timeoutId: NodeJS.Timeout;
 
-    if (isOpen) {
+  const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  if (isOpen) {
+    // Delay the listener to avoid immediate trigger
+    timeoutId = setTimeout(() => {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('touchstart', handleClickOutside);
-    }
+    }, 100);
+  }
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
-  }, [isOpen]);
+  return () => {
+    clearTimeout(timeoutId);
+    document.removeEventListener('mousedown', handleClickOutside);
+    document.removeEventListener('touchstart', handleClickOutside);
+  };
+}, [isOpen]);
+
 
   return (
     <header className="w-full fixed top-0 z-50 bg-white/5 backdrop-blur-xl border-b border-cyan-400/20 shadow-md">
