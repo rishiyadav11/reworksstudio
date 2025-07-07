@@ -1,5 +1,5 @@
 import "styles/globals.css";
-
+import Head from 'next/head'
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
@@ -60,6 +60,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
+      <Head>
+        <meta name="google-site-verification" content="JR7NqfGj6cnhQEofYL58J3-grXL9IikRbUuNgqf2HjU" />
+      </Head>
+
       <body>
           <Navbar/>
         
