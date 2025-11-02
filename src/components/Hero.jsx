@@ -36,7 +36,7 @@ const Hero = () => {
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover brightness-[0.65]"
-        src="/videos/main.mp4"
+        src="/videos/main1.mp4"
         autoPlay
         muted
         loop
