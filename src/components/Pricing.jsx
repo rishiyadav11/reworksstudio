@@ -127,7 +127,7 @@ const Pricing = () => {
         </div>
 
         {/* ✅ DIGITAL MARKETING SECTION */}
-        <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 mb-6">
+        <h2 className="text-3xl md:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 mb-6">
           Digital Media Marketing Plans
         </h2>
 
@@ -167,7 +167,7 @@ const Pricing = () => {
         </div>
 
         {/* ✅ WEBSITE SECTION */}
-        <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-6">
+        <h2 className="text-3xl px-2 text-center md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-6">
           Website Development Plans
         </h2>
 

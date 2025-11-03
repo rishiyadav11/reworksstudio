@@ -15,8 +15,8 @@ const Footer = () => {
 
                     {/* Logo + Text */}
                     <div className="w-full ">
-                        <h2 className="text-3xl font-bold tracking-wide">Reworks Studio</h2>
-                        <p className="mt-4 opacity-80 leading-relaxed max-w-sm">
+                        <h2 className="text-3xl font-bold tracking-wide text-center sm:text-start">Reworks Studio</h2>
+                        <p className="mt-4 opacity-80 text-center leading-relaxed max-w-sm md:text-start">
                             Reinventing Digital — We Build Presence. You Get Sales.
                         </p>
                     </div>

@@ -68,7 +68,7 @@ const Services = () => {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-14 px-6 md:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-14 px-6 md:px-12">
 
         {SERVICES.map((service, index) => (
           <div key={index} className="relative group overflow-hidden rounded-xl">
@@ -92,9 +92,19 @@ const Services = () => {
             </div>
 
             {/* Mobile Always-visible Text */}
-            <div className="md:hidden mt-2 text-center text-sm font-medium opacity-90">
-              {service.title}
-            </div>
+<div
+  className="
+    md:hidden 
+    absolute top-0 left-1/2 transform -translate-x-1/2
+    w-full px-3 py-2
+    text-center text-lg font-bold
+    text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500
+    backdrop-blur-md bg-black/40      /* ✅ Glass effect */
+    rounded-b-xl                      /* ✅ Smooth bottom curve */
+  "
+>
+  {service.title}
+</div>
 
           </div>
         ))}
