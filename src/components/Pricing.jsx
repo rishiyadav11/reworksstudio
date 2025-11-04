@@ -139,7 +139,7 @@ const Pricing = () => {
             >
               <div className="rounded-3xl py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50">
                 <div className="text-4xl font-medium">{plan.name}</div>
-                <div className="text-3xl pt-6">{plan.price}</div>
+                {/* <div className="text-3xl pt-6">{plan.price}</div> */}
                 <div className="py-6">{plan.description}</div>
 
                 <ul>
