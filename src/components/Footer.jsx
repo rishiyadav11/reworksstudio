@@ -47,7 +47,7 @@ const Footer = () => {
 
                             {/* YouTube */}
                             <a
-                                href="https://youtube.com/@reworksstudio"
+                                href="https://youtube.com/@reworks_studio"
                                 target="_blank"
                                 className="hover:text-red-500 scale-150 transition-colors"
                             >
@@ -56,7 +56,7 @@ const Footer = () => {
 
                             {/* Twitter */}
                             <a
-                                href="https://reworks.studio"
+                                href="https://x.com/reworks_studio"
                                 target="_blank"
                                 className="hover:text-blue-400 scale-150 transition-colors"
                             >
