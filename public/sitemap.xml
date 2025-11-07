@@ -1,85 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ✅ Homepage -->
   <url>
     <loc>https://reworksstudio.in/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2025-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
-  </url>
-
-  <!-- ✅ About Us Page -->
-  <url>
-    <loc>https://reworksstudio.in/about</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ✅ Services Page -->
-  <url>
-    <loc>https://reworksstudio.in/services</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <!-- ✅ Plans / Pricing Page -->
-  <url>
-    <loc>https://reworksstudio.in/plans</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-  </url>
-
-  <!-- ✅ Contact Page -->
-  <url>
-    <loc>https://reworksstudio.in/contact</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- ✅ Portfolio / Case Studies Page -->
-  <url>
-    <loc>https://reworksstudio.in/work</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ✅ Blog Page -->
-  <url>
-    <loc>https://reworksstudio.in/blog</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ✅ Individual Blog Posts (edit slug names as needed) -->
-  <url>
-    <loc>https://reworksstudio.in/blog/best-marketing-agency-in-narnaul</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://reworksstudio.in/blog/how-reels-grow-local-businesses</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://reworksstudio.in/blog/meta-ads-for-local-shops</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
   </url>
 
 </urlset>
