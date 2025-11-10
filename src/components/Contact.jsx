@@ -69,9 +69,9 @@ const Contact = () => {
           Connect With Us
         </h2>
 
-        <p className="text-lg opacity-80 mb-10">
+        <h3 className="text-xs text-white   mb-10">
           Tell us what you're working on — we reply within 24 hours.
-        </p>
+        </h3>
 
         {/* ✅ BEAUTIFUL UI FORM */}
         <form

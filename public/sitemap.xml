@@ -4,7 +4,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
 
-  <!-- ✅ Homepage -->
+  <!-- ✅ MAIN HOMEPAGE -->
   <url>
     <loc>https://reworksstudio.in/</loc>
     <lastmod>2025-11-02</lastmod>
@@ -12,74 +12,39 @@
     <priority>1.00</priority>
   </url>
 
-  <!-- ✅ About Us Page -->
-  <url>
-    <loc>https://reworksstudio.in/about</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
 
-  <!-- ✅ Services Page -->
-  <url>
-    <loc>https://reworksstudio.in/services</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
+  <!-- ✅ 30 SEO ANCHOR URLS (Single Page SEO Strategy) -->
+  <url><loc>https://reworksstudio.in/#best-digital-marketing-agency-in-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#narnaul-marketing-agency</loc></url>
+  <url><loc>https://reworksstudio.in/#digital-marketing-services-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#social-media-marketing-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#meta-ads-agency-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#instagram-growth-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#facebook-ads-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#website-design-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#brand-promotion-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#local-seo-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#seo-services-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#performance-marketing-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#google-ads-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#youtube-marketing-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#content-creation-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#reels-creation-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#growth-marketing-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#small-business-marketing-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#lead-generation-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#automation-services-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#local-business-branding-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#top-marketing-agency-in-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#digital-branding-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#creative-agency-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#ads-agency-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#local-marketing-experts-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#budget-marketing-services-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#best-marketing-company-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#result-driven-marketing-narnaul</loc></url>
+  <url><loc>https://reworksstudio.in/#reworks-studio-narnaul</loc></url>
 
-  <!-- ✅ Plans / Pricing Page -->
-  <url>
-    <loc>https://reworksstudio.in/plans</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-  </url>
 
-  <!-- ✅ Contact Page -->
-  <url>
-    <loc>https://reworksstudio.in/contact</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- ✅ Portfolio / Case Studies Page -->
-  <url>
-    <loc>https://reworksstudio.in/work</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ✅ Blog Page -->
-  <url>
-    <loc>https://reworksstudio.in/blog</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ✅ Individual Blog Posts (edit slug names as needed) -->
-  <url>
-    <loc>https://reworksstudio.in/blog/best-marketing-agency-in-narnaul</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://reworksstudio.in/blog/how-reels-grow-local-businesses</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://reworksstudio.in/blog/meta-ads-for-local-shops</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
 
 </urlset>

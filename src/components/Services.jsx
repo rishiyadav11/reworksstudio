@@ -60,7 +60,8 @@ const Services = () => {
       {/* Heading */}
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-400 to-sky-300">
-          What We Offer
+        What We Offer
+
         </h1>
         <p className="mt-3 text-neutral-300">
           Premium digital services designed to grow your business.

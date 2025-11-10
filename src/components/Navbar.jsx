@@ -38,7 +38,7 @@ const Navbar = () => {
         <a href="#home" className="flex items-center gap-3">
           <img src="/blogo.jpg" className="h-10 w-10 rounded-xl" alt="logo" />
           <p className="text-white font-bold tracking-wide text-xl">
-            Reworks®
+            ReworksStudio®
           </p>
         </a>
 

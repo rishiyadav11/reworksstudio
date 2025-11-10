@@ -19,6 +19,9 @@ const Footer = () => {
                         <p className="mt-4 opacity-80 text-center leading-relaxed max-w-sm md:text-start">
                             Reinventing Digital — We Build Presence. You Get Sales.
                         </p>
+                        <p className="mt-4 text-sm opacity-70 text-center leading-relaxed max-w-sm md:text-start">
+                            Reworks Studio is the best digital marketing agency in Narnaul, Haryana, specializing in social media marketing, paid ads, SEO, and website development for local businesses.
+                        </p>
                     </div>
 
                     {/* Logo Image Cleanly Centered */}
