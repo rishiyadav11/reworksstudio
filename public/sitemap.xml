@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- ✅ MAIN HOMEPAGE -->
   <url>
     <loc>https://reworksstudio.in/</loc>
-    <lastmod>2025-11-02</lastmod>
+    <lastmod>2025-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
