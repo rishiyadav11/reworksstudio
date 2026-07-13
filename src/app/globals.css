@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== REWORKS STUDIO — TANAYA STYLE BRAND TOKENS ===== */
+  --color-brand-cream: #f5f3f0;
+  --color-brand-dark: #131415;
+  --color-brand-purple: #5e67e6;
+  --color-brand-light-purple: #eeedfd;
+  --color-brand-muted: #8f8f8f;
+  --color-brand-accent-yellow: #fded7d;
+  --color-brand-accent-green: #d0ff71;
+
+  /* Vivid accent palette */
+  --color-rs-cyan:   #1b43f4;
+  --color-rs-pink:   #ff3eda;
+  --color-rs-green:  #00c850;
+  --color-rs-orange: #f97316;
+  --color-rs-purple: #7c3aed;
+
+  --font-inter:        var(--font-inter);
+  --font-poppins:      var(--font-poppins);
+  --font-anton:        var(--font-anton);
+  --font-mono-roboto:  var(--font-mono-roboto);
+  --font-handwriting:  var(--font-handwriting);
+}
+
+:root {
+  --background: #f5f3f0;
+  --foreground: #131415;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track  { background: #f5f3f0; }
+::-webkit-scrollbar-thumb  { background: #5e67e633; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #5e67e688; }
+
+/* ===== SELECTION ===== */
+::selection { background: #1b43f433; color: #131415; }
+
+/* ===== MARQUEE ===== */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 30s linear infinite; will-change: transform; }
+
+/* ===== FLOAT ===== */
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+.animate-float       { animation: float 5s ease-in-out infinite; }
+.animate-float-slow  { animation: float 7s ease-in-out infinite; }
+
+/* ===== DRAGGABLE ===== */
+.sticker-drag { cursor: grab; }
+.sticker-drag:active { cursor: grabbing; }
+
+/* ===== LINK HOVER UNDERLINE ===== */
+.hover-underline { position: relative; }
+.hover-underline::after {
+  content: ""; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 1.5px;
+  background: #131415;
+  transition: width 0.25s ease;
+}
+.hover-underline:hover::after { width: 100%; }
