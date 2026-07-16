@@ -11,6 +11,7 @@ const navLinks = [
   { label: "SERVICES", href: "/services" },
   { label: "WORK",     href: "/work" },
   { label: "ABOUT",    href: "/about" },
+  { label: "TRUST",    href: "/trust" },
   { label: "CONNECT",  href: "/connect" },
 ];
 
@@ -55,14 +56,22 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile toggle */}
-          <button
-            className="md:hidden text-brand-dark/70 hover:text-brand-dark transition-colors"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* CTA & Mobile toggle */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="/connect"
+              className="hidden md:flex items-center gap-2 bg-brand-dark text-brand-cream px-4 py-2 text-xs font-bold tracking-widest uppercase hover:bg-brand-purple transition-colors border border-brand-dark"
+            >
+              BOOK A CALL
+            </Link>
+            <button
+              className="md:hidden text-brand-dark/70 hover:text-brand-dark transition-colors"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -91,6 +100,13 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              <Link
+                href="/connect"
+                className="mt-4 text-center text-sm font-bold tracking-widest py-3 bg-brand-dark text-brand-cream border border-brand-dark uppercase"
+                onClick={() => setMobileOpen(false)}
+              >
+                BOOK A CALL
+              </Link>
             </div>
           </motion.div>
         )}

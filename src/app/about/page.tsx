@@ -75,11 +75,11 @@ export default function About() {
         {/* 3D Visual Centerpiece Layout */}
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-grow">
           {/* Left Text Detail Column */}
-          <div className="lg:col-span-4 space-y-4">
-            <h1 className="font-anton text-[7vw] lg:text-[6vw] leading-none text-[#fffbeb] tracking-widest">
+          <div className="lg:col-span-4 space-y-4 text-center lg:text-left z-10">
+            <h1 className="font-anton text-6xl md:text-[7vw] lg:text-[6vw] leading-none text-[#fffbeb] tracking-widest">
               CREATIVE
             </h1>
-            <div className="max-w-xs font-sans text-xs md:text-sm leading-relaxed text-[#fffbeb]/85">
+            <div className="max-w-xs mx-auto lg:mx-0 font-sans text-xs md:text-sm leading-relaxed text-[#fffbeb]/85">
               <p>
                 <strong>Reworks Studio</strong> is an India-based design and development studio. Founded by <strong>Rishi Yadav</strong> and later joined by <strong>Navdeep Bhardwaj</strong>, we have grown into a high-octane team of designers, engineers, and creatives crafting state-of-the-art digital interfaces.
               </p>
@@ -87,7 +87,7 @@ export default function About() {
           </div>
 
           {/* Center Card with 3D Scrolling Perspective (lg:col-span-4) */}
-          <div className="lg:col-span-4 flex items-center justify-center py-6" style={{ perspective: "1200px" }}>
+          <div className="lg:col-span-4 flex items-center justify-center py-6 md:py-12 z-20" style={{ perspective: "1200px" }}>
             <motion.div
               style={{
                 rotateY: cardRotateY,
@@ -95,13 +95,13 @@ export default function About() {
                 scale: cardScale,
                 transformStyle: "preserve-3d",
               }}
-              className="w-[260px] md:w-[300px] aspect-[3/4] border-2 border-[#fffbeb]/20 bg-brand-cream/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.6)] relative cursor-grab active:cursor-grabbing"
+              className="w-[240px] md:w-[300px] aspect-[3/4] border-2 border-[#fffbeb]/20 bg-brand-cream/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.6)] relative cursor-grab active:cursor-grabbing"
             >
               {/* Card 1: Rishi Yadav */}
               {activeCardIndex === 0 && (
                 <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/rishi.png')" }}>
                   <div className="absolute inset-0 bg-black/15" />
-                  <div className="absolute bottom-4 left-4 bg-brand-dark/80 backdrop-blur-sm text-brand-cream border border-brand-cream/20 text-[9px] px-3 py-1 font-mono-roboto tracking-wider uppercase">
+                  <div className="absolute bottom-4 left-4 right-4 bg-brand-dark/80 backdrop-blur-sm text-brand-cream border border-brand-cream/20 text-[9px] px-3 py-2 font-mono-roboto tracking-wider uppercase text-center rounded">
                     Rishi Yadav • Founder
                   </div>
                 </div>
@@ -109,9 +109,9 @@ export default function About() {
 
               {/* Card 2: Navdeep Bhardwaj */}
               {activeCardIndex === 1 && (
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80')" }}>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://media.licdn.com/dms/image/v2/D5635AQHhXoNOYvxmCA/profile-framedphoto-shrink_200_200/B56ZjiYCfKG0AY-/0/1756144609520?e=1784829600&v=beta&t=Oaj8RHCfhqLwSxifCJi517lp-4APYPTc6umZQ-1vD8Y')" }}>
                   <div className="absolute inset-0 bg-black/15" />
-                  <div className="absolute bottom-4 left-4 bg-brand-dark/80 backdrop-blur-sm text-brand-cream border border-brand-cream/20 text-[9px] px-3 py-1 font-mono-roboto tracking-wider uppercase">
+                  <div className="absolute bottom-4 left-4 right-4 bg-brand-dark/80 backdrop-blur-sm text-brand-cream border border-brand-cream/20 text-[9px] px-3 py-2 font-mono-roboto tracking-wider uppercase text-center rounded">
                     Navdeep Bhardwaj • Co-Founder
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export default function About() {
               {activeCardIndex === 2 && (
                 <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80')" }}>
                   <div className="absolute inset-0 bg-black/15" />
-                  <div className="absolute bottom-4 left-4 bg-[#131415]/80 backdrop-blur-sm text-brand-cream border border-brand-cream/20 text-[9px] px-3 py-1 font-mono-roboto tracking-wider uppercase">
+                  <div className="absolute bottom-4 left-4 right-4 bg-[#131415]/80 backdrop-blur-sm text-brand-cream border border-brand-cream/20 text-[9px] px-3 py-2 font-mono-roboto tracking-wider uppercase text-center rounded">
                     The Reworks Team
                   </div>
                 </div>
@@ -130,8 +130,8 @@ export default function About() {
           </div>
 
           {/* Right Text Detail Column */}
-          <div className="lg:col-span-4 space-y-4 lg:text-right flex flex-col items-start lg:items-end">
-            <h1 className="font-anton text-[7vw] lg:text-[6vw] leading-none text-[#fffbeb] tracking-widest">
+          <div className="lg:col-span-4 space-y-4 text-center lg:text-right flex flex-col items-center lg:items-end z-10">
+            <h1 className="font-anton text-6xl md:text-[7vw] lg:text-[6vw] leading-none text-[#fffbeb] tracking-widest">
               STUDIO
             </h1>
             <div className="max-w-xs font-sans text-xs md:text-sm leading-relaxed text-[#fffbeb]/85 lg:text-right">

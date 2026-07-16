@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion as framerMotion, AnimatePresence as framerAnimatePresence } from "framer-motion";
 import { ArrowUpRight, Filter, X, Cpu, ShoppingBag, Eye, ShieldAlert, Award } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface ProjectItem {
   id: string;
@@ -26,7 +27,7 @@ const PORTFOLIO_ITEMS: ProjectItem[] = [
     category: "SaaS & AI",
     filterTag: "saas-ai",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    image: "/reviewboost_dashboard.png",
     bg: "#e0e7ff",
     accent: "#6366f1",
     tech: ["FastAPI", "Llama 3", "Qdrant Vector DB", "LangChain"],
@@ -52,7 +53,7 @@ const PORTFOLIO_ITEMS: ProjectItem[] = [
     category: "SaaS & AI",
     filterTag: "saas-ai",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    image: "/orbis_compiler.png",
     bg: "#ecfdf5",
     accent: "#10b981",
     tech: ["React", "Vision Models", "Tailwind CSS", "TypeScript"],
@@ -91,7 +92,7 @@ const PORTFOLIO_ITEMS: ProjectItem[] = [
     category: "E-commerce & Retail",
     filterTag: "ecommerce",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+    image: "/baemark_store.png",
     bg: "#fef3c7",
     accent: "#b45309",
     tech: ["Next.js", "E-commerce", "Tailwind CSS", "User Experience"],
@@ -201,6 +202,45 @@ const PORTFOLIO_ITEMS: ProjectItem[] = [
     tech: ["Next.js", "Resorts Booking Engine", "Tailwind CSS"],
     description: "Luxury hospitality portal and event booking framework streamlining amenities, room reservations, and SMS notifications.",
     badge: "Hospitality & Fitness"
+  },
+  {
+    id: "synth-flow",
+    title: "SynthFlow Automation",
+    category: "SaaS & AI",
+    filterTag: "saas-ai",
+    year: "2025",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    bg: "#f3e8ff",
+    accent: "#a855f7",
+    tech: ["Next.js", "Node.js", "React Flow", "Tailwind CSS"],
+    description: "Visual node-based automation builder allowing non-technical teams to construct complex LLM workflows and agentic pipelines in a drag-and-drop canvas.",
+    badge: "SaaS & AI"
+  },
+  {
+    id: "nexus-finance",
+    title: "Nexus Finance OS",
+    category: "E-commerce & Retail",
+    filterTag: "ecommerce",
+    year: "2024",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+    bg: "#e0f2fe",
+    accent: "#0ea5e9",
+    tech: ["React", "TypeScript", "Prisma", "D3.js"],
+    description: "Modern financial operating system for digital retail, offering real-time revenue analytics, smart inventory forecasting, and sleek dashboards.",
+    badge: "FinTech & Analytics"
+  },
+  {
+    id: "healthsync-medical",
+    title: "HealthSync Medical",
+    category: "Health & Education",
+    filterTag: "health-edu",
+    year: "2025",
+    image: "/healthsync_medical.png",
+    bg: "#f0fdf4",
+    accent: "#22c55e",
+    tech: ["Next.js", "FHIR / HL7", "Tailwind CSS", "HIPAA Compliant DB"],
+    description: "HIPAA-compliant patient management dashboard with AI-driven triage and secure data pipelines for modern clinics.",
+    badge: "Health & Education"
   }
 ];
 
@@ -213,6 +253,7 @@ const FILTERS = [
 ];
 
 export default function WorkPage() {
+  const router = useRouter();
   const [indiaTime, setIndiaTime] = useState("");
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProj, setSelectedProj] = useState<ProjectItem | null>(null);
@@ -300,7 +341,14 @@ export default function WorkPage() {
         boxShadow: "-10px 14px 0px #131415",
         transition: { type: "spring", stiffness: 400, damping: 18 },
       }}
-      onClick={() => setSelectedProj(item)}
+      onClick={() => {
+        const deepCaseStudies = ["reviewboost-ai", "orbis-compiler", "baemark", "synth-flow", "nexus-finance", "healthsync-medical"];
+        if (deepCaseStudies.includes(item.id)) {
+          router.push(`/work/${item.id}`);
+        } else {
+          setSelectedProj(item);
+        }
+      }}
       className="group w-full overflow-hidden border-2 border-[#131415] cursor-pointer relative"
       style={{
         background: item.bg,
@@ -352,7 +400,7 @@ export default function WorkPage() {
         </p>
 
         <div className="mt-4 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-[#131415] group-hover:text-[#5e67e6] transition-colors duration-300 border-t border-[#131415]/10 pt-4">
-          View Case Study
+          Live Demo / GitHub
           <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </div>
       </div>

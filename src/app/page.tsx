@@ -100,6 +100,11 @@ export default function Board() {
     return () => clearInterval(t);
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   return (
     <div className="flex-grow w-full bg-brand-cream select-none">
       {/* ══════════════════════════════════════════
@@ -120,7 +125,7 @@ export default function Board() {
         }}
       >
         {/* ── CENTRE HERO NAME ── */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[1]">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[40]">
           <div className="text-center relative" style={{ marginTop: "-40px" }}>
             {/* "Web & Apps" — cursive top-left */}
             <div
@@ -210,7 +215,7 @@ export default function Board() {
 
         {/* 1. Blue "Hire Us" button — top-left */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.05, zIndex: 100 }}
           className="absolute cursor-grab active:cursor-grabbing"
           style={{ left: "2%", top: "8%", zIndex: 20 }}
@@ -237,9 +242,9 @@ export default function Board() {
 
         {/* 2. "Services" card — left side, newspaper-style */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
-          className="absolute cursor-grab active:cursor-grabbing"
+          className="hidden md:block absolute cursor-grab active:cursor-grabbing"
           style={{ left: "22%", top: "16%", zIndex: 15 }}
           initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 180, damping: 16, delay: 0.12 }}
@@ -301,9 +306,9 @@ export default function Board() {
 
         {/* 3. Magenta soda / "AI" can — center */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
-          className="absolute cursor-grab active:cursor-grabbing"
+          className="hidden md:block absolute cursor-grab active:cursor-grabbing"
           style={{ left: "43%", top: "19%", zIndex: 16 }}
           initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 180, damping: 16, delay: 0.18 }}
@@ -324,7 +329,7 @@ export default function Board() {
 
         {/* 4. Pink hexagon shape */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
           className="absolute cursor-grab active:cursor-grabbing"
           style={{ left: "53%", top: "20%", zIndex: 8 }}
@@ -336,7 +341,7 @@ export default function Board() {
 
         {/* 5. "AI Chatbot" illustration card — right side */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
           className="absolute cursor-grab active:cursor-grabbing"
           style={{ right: "5%", top: "12%", zIndex: 12 }}
@@ -393,7 +398,7 @@ export default function Board() {
 
         {/* 6. Top-right polaroid — abstract dashboard screenshot */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
           className="absolute cursor-grab active:cursor-grabbing"
           style={{ right: "1%", top: "2%", zIndex: 16 }}
@@ -432,9 +437,9 @@ export default function Board() {
 
         {/* 7. Left quote card #1 */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
-          className="absolute cursor-grab active:cursor-grabbing"
+          className="hidden md:block absolute cursor-grab active:cursor-grabbing"
           style={{ left: "2%", top: "46%", zIndex: 8 }}
           initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 180, damping: 16, delay: 0.28 }}
@@ -452,9 +457,9 @@ export default function Board() {
 
         {/* 8. Abstract workflow illustration — lower left */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
-          className="absolute cursor-grab active:cursor-grabbing"
+          className="hidden md:block absolute cursor-grab active:cursor-grabbing"
           style={{ left: "16%", top: "63%", zIndex: 11 }}
           initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 180, damping: 16, delay: 0.25 }}
@@ -489,9 +494,9 @@ export default function Board() {
 
         {/* 9. Phone mockup — center-bottom */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
-          className="absolute cursor-grab active:cursor-grabbing"
+          className="hidden md:block absolute cursor-grab active:cursor-grabbing"
           style={{ left: "38%", top: "56%", zIndex: 15 }}
           initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 180, damping: 16, delay: 0.2 }}
@@ -538,9 +543,9 @@ export default function Board() {
 
         {/* 10. Right quote card #2 */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
-          className="absolute cursor-grab active:cursor-grabbing"
+          className="hidden md:block absolute cursor-grab active:cursor-grabbing"
           style={{ right: "4%", top: "56%", zIndex: 9 }}
           initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 180, damping: 16, delay: 0.33 }}
@@ -555,7 +560,7 @@ export default function Board() {
 
         {/* 11. DRAG DROP SHOW stamp */}
         <motion.div
-          drag dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
+          drag={!isMobile} dragConstraints={containerRef} dragElastic={0.08} dragMomentum={false}
           whileDrag={{ scale: 1.04, zIndex: 100 }}
           className="absolute cursor-grab active:cursor-grabbing"
           style={{ left: "3%", top: "78%", zIndex: 18 }}
@@ -797,7 +802,7 @@ export default function Board() {
                 href={project.link}
                 className="inline-flex items-center gap-2 font-mono-roboto text-[11px] font-bold uppercase tracking-wider text-brand-dark hover:underline"
               >
-                Launch Project Space <ArrowUpRight className="w-3.5 h-3.5" />
+                Live Demo / GitHub <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </motion.div>
           ))}
@@ -952,81 +957,7 @@ export default function Board() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════
-          SECTION 4.3 — CLIENT TESTIMONIALS
-          ══════════════════════════════════════════ */}
-      <div
-        className="w-full px-6 md:px-12 py-24 border-t border-brand-dark/10"
-        style={{ background: "#f5f3f0" }}
-      >
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center mb-16">
-          <span className="font-mono-roboto text-xs font-bold tracking-widest text-brand-purple uppercase">CLIENT FEEDBACK</span>
-          <h2 className="font-anton text-4xl md:text-5xl tracking-tight text-brand-dark mt-2">TESTIMONIALS</h2>
-        </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              quote: "Reworks completely revolutionized our SaaS platform. The dashboard they built is stunning and our onboarding conversion increased by 40%. The attention to responsive layouts and tiny hover effects makes the design feel premium.",
-              author: "Sarah Jenkins",
-              role: "Founder, ApexFlow",
-              initials: "SJ",
-              avatarBg: "#ff3eda",
-              color: "#e8eeff"
-            },
-            {
-              quote: "Their custom AI workflows and n8n integrations save our operations team over 15 hours a week. They wrote clean TypeScript code, and did not rely on heavy, bloated templates. An exceptional engineering team with great taste.",
-              author: "David K.",
-              role: "Director of Ops, Metatech",
-              initials: "DK",
-              avatarBg: "#00c850",
-              color: "#ffe8fb"
-            },
-            {
-              quote: "The most creative development studio we have ever worked with. They took our complex brand architecture and built a highly interactive digital portfolio that wows our high-ticket corporate clients at first glance. Highly recommended.",
-              author: "Elena Rostova",
-              role: "Creative Lead, Bloom Agency",
-              initials: "ER",
-              avatarBg: "#1b43f4",
-              color: "#e8fff2"
-            }
-          ].map((card, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="border-2 border-brand-dark p-8 flex flex-col justify-between"
-              style={{ background: card.color, boxShadow: "-5px 5px 0px 0px #131415" }}
-            >
-              <div>
-                <span className="font-serif text-4xl text-brand-dark/20 block leading-none mb-4">“</span>
-                <p className="font-sans text-xs text-brand-dark/85 leading-relaxed italic mb-8">
-                  {card.quote}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div
-                  className="w-10 h-10 rounded-full border-2 border-brand-dark flex items-center justify-center font-mono-roboto font-bold text-xs text-white shadow-[-2px_2px_0px_0px_#131415]"
-                  style={{ backgroundColor: card.avatarBg }}
-                >
-                  {card.initials}
-                </div>
-                <div>
-                  <h4 className="font-mono-roboto text-[11px] font-black uppercase text-brand-dark">
-                    {card.author}
-                  </h4>
-                  <span className="font-sans text-[10px] text-brand-dark/50 block">
-                    {card.role}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
       {/* ══════════════════════════════════════════
           SECTION 4.4 — FAQ ACCORDION
@@ -1056,7 +987,7 @@ export default function Board() {
             },
             {
               q: "What is your pricing model?",
-              a: "We operate on a project-by-project fixed scope model. After mapping out requirements in Step 1 of our roadmap, we give you a transparent proposal detailing the scope, timeline, and exact cost. No hidden fees or surprise hourly invoices."
+              a: "We operate on a project-by-project fixed scope model. Projects typically start from $1,000 (USD / GBP / AUD equivalents accepted). After mapping out requirements in Step 1 of our roadmap, we give you a transparent proposal detailing the scope, timeline, and exact cost. No hidden fees or surprise hourly invoices."
             }
           ].map((item, idx) => {
             const isFaqOpen = activeFaq === idx;
