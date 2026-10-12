@@ -40,100 +40,169 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Reworks Studio | Custom Software & AI Agency in Narnaul & Gurugram",
+  metadataBase: new URL("https://reworksstudio.in"),
+  title: {
+    default: "Reworks Studio | Autonomous AI Systems & Custom Software Engineering",
+    template: "%s | Reworks Studio"
+  },
   description:
-    "Reworks Studio is the top custom software, web design, and AI agency in Narnaul and Gurugram, Haryana, India. We build premium Next.js websites, mobile apps, SaaS dashboards, and intelligent AI agents.",
+    "Reworks Studio designs and engineers production AI agents, autonomous workflow pipelines, and custom software systems. Partnering with high-growth technology teams globally.",
   keywords: [
     "Reworks Studio",
-    "AI agency Narnaul",
-    "custom software developer Narnaul",
-    "best web design studio Gurugram",
-    "top AI agents developer Haryana",
-    "Reworks Narnaul",
-    "Reworks Gurugram",
-    "Reworks Studio India",
-    "AI agency India",
-    "AI agents",
-    "AI chatbots",
-    "AI workflows",
-    "custom software",
-    "web development",
-    "mobile apps",
-    "portfolio websites",
-    "dashboard development",
-    "digital agency India",
+    "AI engineering studio",
+    "autonomous AI agents",
+    "custom software development",
+    "multi-agent systems",
+    "AI workflow automation",
+    "enterprise RAG systems",
+    "SaaS dashboard development",
+    "Next.js engineering",
+    "FastAPI LLM pipelines",
+    "Rishi Yadav",
+    "Navdeep Bhardwaj"
   ],
-  authors: [{ name: "Reworks Studio" }],
+  authors: [
+    { name: "Rishi Yadav", url: "https://reworksstudio.in/about" },
+    { name: "Navdeep Bhardwaj", url: "https://reworksstudio.in/about" }
+  ],
+  creator: "Reworks Studio",
+  publisher: "Reworks Studio",
+  alternates: {
+    canonical: "https://reworksstudio.in",
+  },
   openGraph: {
-    title: "Reworks Studio | Custom Software & AI Agency in Narnaul & Gurugram",
+    title: "Reworks Studio | Autonomous AI Systems & Custom Software Engineering",
     description:
-      "Premium websites, custom software, apps, AI agents & intelligent automation in Narnaul, Gurugram, and across India.",
+      "Production-grade AI agents, workflow automation pipelines, and custom software engineered for high-growth tech teams.",
+    url: "https://reworksstudio.in",
+    siteName: "Reworks Studio",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/orbis_compiler.png",
+        width: 1200,
+        height: 630,
+        alt: "Reworks Studio Engineering Architecture",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reworks Studio | Autonomous AI Systems & Custom Software Engineering",
+    description:
+      "Production-grade AI agents, workflow automation pipelines, and custom software engineered for high-growth tech teams.",
+    images: ["/orbis_compiler.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Reworks Studio",
-  "image": "https://reworksstudio.in/logo.png",
-  "@id": "https://reworksstudio.in/#organization",
-  "url": "https://reworksstudio.in",
-  "telephone": "",
-  "priceRange": "$$",
-  "address": [
+  "@graph": [
     {
-      "@type": "PostalAddress",
-      "streetAddress": "Gurugram",
-      "addressLocality": "Gurugram",
-      "addressRegion": "Haryana",
-      "postalCode": "122001",
-      "addressCountry": "IN"
+      "@type": "Organization",
+      "@id": "https://reworksstudio.in/#organization",
+      "name": "Reworks Studio",
+      "url": "https://reworksstudio.in",
+      "logo": "https://reworksstudio.in/orbis_compiler.png",
+      "email": "hello@reworksstudio.in",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Rishi Yadav",
+          "jobTitle": "Founder & Technical Lead",
+          "image": "https://reworksstudio.in/rishi.png"
+        },
+        {
+          "@type": "Person",
+          "name": "Navdeep Bhardwaj",
+          "jobTitle": "Co-Founder & Director"
+        }
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Cyber City / Sector 29",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "postalCode": "122001",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Narnaul Hub",
+          "addressLocality": "Narnaul",
+          "addressRegion": "Haryana",
+          "postalCode": "123001",
+          "addressCountry": "IN"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/rishiyadav11",
+        "https://linkedin.com"
+      ]
     },
     {
-      "@type": "PostalAddress",
-      "streetAddress": "Narnaul",
-      "addressLocality": "Narnaul",
-      "addressRegion": "Haryana",
-      "postalCode": "123001",
-      "addressCountry": "IN"
-    }
-  ],
-  "geo": [
-    {
-      "@type": "GeoCoordinates",
-      "latitude": "28.4595",
-      "longitude": "77.0266"
+      "@type": "WebSite",
+      "@id": "https://reworksstudio.in/#website",
+      "url": "https://reworksstudio.in",
+      "name": "Reworks Studio",
+      "publisher": {
+        "@id": "https://reworksstudio.in/#organization"
+      }
     },
     {
-      "@type": "GeoCoordinates",
-      "latitude": "28.0444",
-      "longitude": "76.1112"
+      "@type": "ProfessionalService",
+      "@id": "https://reworksstudio.in/#service",
+      "name": "Reworks Studio — AI & Custom Software Engineering",
+      "url": "https://reworksstudio.in/services",
+      "provider": {
+        "@id": "https://reworksstudio.in/#organization"
+      },
+      "areaServed": ["United States", "United Kingdom", "Australia", "India", "Global"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Engineering Capabilities",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Autonomous AI Agents & Swarms",
+              "description": "Multi-agent systems with deterministic tool calling and guardrails."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workflow Automation Pipelines",
+              "description": "Enterprise event routing, webhook pipelines, and n8n integrations."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Production SaaS Dashboards & Portals",
+              "description": "Next.js 16 and TypeScript full-stack applications with PostgreSQL."
+            }
+          }
+        ]
+      }
     }
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "10:00",
-    "closes": "19:00"
-  },
-  "founders": [
-    {
-      "@type": "Person",
-      "name": "Rishi Yadav"
-    },
-    {
-      "@type": "Person",
-      "name": "Navdeep Bhardwaj"
-    }
-  ],
-  "description": "Reworks Studio is a premier custom software, AI engineering, and digital design agency based in Narnaul and Gurugram, Haryana, India. Founded by Rishi Yadav and Navdeep Bhardwaj, we build Next.js portals, SaaS dashboards, and automated AI agents."
+  ]
 };
 
 export default function RootLayout({

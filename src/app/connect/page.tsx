@@ -36,6 +36,7 @@ function ConnectForm() {
   const [details, setDetails] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
 
   // Read search parameters from Services page calculator
   useEffect(() => {
@@ -81,19 +82,23 @@ function ConnectForm() {
     }
   };
 
+  const servicesText = selectedServices
+    .map((id) => SERVICES_OPTIONS.find((s) => s.id === id)?.label ?? id)
+    .join(", ") || "None selected";
+  const budgetText = (BUDGET_OPTIONS.find((b) => b.value === budget)?.label ?? budget) || "Not specified";
+
+  const directMailtoHref = `mailto:hello@reworksstudio.in?subject=${encodeURIComponent(
+    `Project Brief from ${name || "Potential Partner"}`
+  )}&body=${encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\nServices: ${servicesText}\nBudget: ${budgetText}\n\nProject Details:\n${details || "N/A"}`
+  )}`;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email) return;
 
     setSubmitting(true);
-
-    // Map selected service IDs to their readable labels
-    const servicesText = selectedServices
-      .map((id) => SERVICES_OPTIONS.find((s) => s.id === id)?.label ?? id)
-      .join(", ") || "None selected";
-
-    // Map budget value to readable label
-    const budgetText = (BUDGET_OPTIONS.find((b) => b.value === budget)?.label ?? budget) || "Not specified";
+    setFormError(null);
 
     // Current timestamp
     const now = new Date();
@@ -112,17 +117,24 @@ function ConnectForm() {
       time: timeText,
     };
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      // If EmailJS env vars are not yet populated in production/dev, open mailto directly
+      window.location.href = directMailtoHref;
+      setSubmitted(true);
+      setSubmitting(false);
+      return;
+    }
+
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
-      );
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       setSubmitted(true);
     } catch (err) {
-      console.error("EmailJS error:", err);
-      alert("Something went wrong sending your message. Please try again.");
+      console.error("EmailJS transmission issue:", err);
+      setFormError("Automated transmission encountered an error. You can transmit directly via email client.");
     } finally {
       setSubmitting(false);
     }
@@ -135,14 +147,14 @@ function ConnectForm() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white border-2 border-brand-dark p-8 text-center space-y-4"
-          style={{ boxShadow: "-6px 6px 0px 0px #00c850" }}
+          style={{ boxShadow: "-6px 6px 0px 0px #059669" }}
         >
-          <div className="w-16 h-16 bg-[#e8fff2] border-2 border-[#00c850] rounded-full flex items-center justify-center mx-auto shadow-[-2px_2px_0px_0px_#131415]">
-            <Check className="w-8 h-8 text-[#00c850]" />
+          <div className="w-16 h-16 bg-[#e8fff2] border-2 border-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-[-2px_2px_0px_0px_#121314]">
+            <Check className="w-8 h-8 text-emerald-600" />
           </div>
-          <h2 className="font-anton text-2xl tracking-wider text-brand-dark uppercase">MESSAGE TRANSMITTED</h2>
-          <p className="font-sans text-xs text-brand-dark/70 leading-relaxed max-w-sm mx-auto">
-            Thank you, {name}! We received your project specs and will review them within 24 hours. A creative technologist will reach out to schedule an alignment call.
+          <h2 className="font-anton text-2xl tracking-wider text-brand-dark uppercase">TRANSMISSION RECEIVED</h2>
+          <p className="font-sans text-xs text-brand-dark/80 leading-relaxed max-w-sm mx-auto">
+            Thank you, {name}! We received your project specs. A founding engineer (Rishi or Navdeep) will review the architectural boundaries and follow up within 24 hours.
           </p>
           <button
             onClick={() => {
@@ -152,18 +164,30 @@ function ConnectForm() {
               setDetails("");
               setSelectedServices([]);
               setBudget("");
+              setFormError(null);
             }}
-            className="font-mono-roboto text-[10px] font-bold tracking-widest text-[#5e67e6] hover:underline uppercase"
+            className="font-mono-roboto text-[10px] font-bold tracking-widest text-brand-cobalt hover:underline uppercase inline-block mt-2"
           >
-            Send Another Transmission ✦
+            Submit Another Brief ✦
           </button>
         </motion.div>
       ) : (
         <form
           onSubmit={handleSubmit}
           className="bg-white border-2 border-brand-dark p-6 md:p-8 space-y-6 relative"
-          style={{ boxShadow: "-8px 8px 0px 0px #131415" }}
+          style={{ boxShadow: "-8px 8px 0px 0px #121314" }}
         >
+          {formError && (
+            <div className="p-4 bg-amber-50 border-2 border-amber-500 text-xs font-sans text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <span>{formError}</span>
+              <a
+                href={directMailtoHref}
+                className="px-3 py-1.5 bg-brand-dark text-white font-mono-roboto text-[10px] font-bold tracking-wider uppercase flex-shrink-0"
+              >
+                Send via Email App →
+              </a>
+            </div>
+          )}
           {/* Form Header */}
           <div className="border-b border-brand-dark/10 pb-4">
             <h3 className="font-anton text-xl tracking-wider text-brand-dark uppercase">

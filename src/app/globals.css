@@ -1,27 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  /* ===== REWORKS STUDIO — TANAYA STYLE BRAND TOKENS ===== */
-  --color-brand-cream: #f5f3f0;
-  --color-brand-dark: #131415;
-  --color-brand-purple: #5e67e6;
+  /* ===== REWORKS STUDIO — TECHNICAL BRAND TOKENS ===== */
+  --color-brand-cream: #f6f5f2;
+  --color-brand-surface: #ffffff;
+  --color-brand-dark: #121314;
+  --color-brand-card-dark: #18191b;
+  --color-brand-purple: #4f46e5;
   --color-brand-light-purple: #eeedfd;
-  --color-brand-muted: #8f8f8f;
-  --color-brand-accent-yellow: #fded7d;
-  --color-brand-accent-green: #d0ff71;
+  --color-brand-muted: #6b7280;
+  --color-brand-border: #e2e0dc;
+  
+  /* Technical Signal Accents */
+  --color-brand-cobalt: #1b43f4;
+  --color-brand-violet: #7c3aed;
+  --color-brand-emerald: #059669;
+  --color-brand-amber: #d97706;
 
-  /* Vivid accent palette */
-  --color-rs-cyan:   #1b43f4;
-  --color-rs-pink:   #ff3eda;
-  --color-rs-green:  #00c850;
-  --color-rs-orange: #f97316;
+  /* Legacy compatibility mappings */
+  --color-rs-cyan: #1b43f4;
+  --color-rs-pink: #db2777;
+  --color-rs-green: #059669;
+  --color-rs-orange: #ea580c;
   --color-rs-purple: #7c3aed;
 
-  --font-inter:        var(--font-inter);
-  --font-poppins:      var(--font-poppins);
-  --font-anton:        var(--font-anton);
-  --font-mono-roboto:  var(--font-mono-roboto);
-  --font-handwriting:  var(--font-handwriting);
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+  --font-anton: var(--font-anton);
+  --font-mono-roboto: var(--font-mono-roboto);
+  --font-handwriting: var(--font-handwriting);
 }
 
 :root {
